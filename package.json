@@ -1,0 +1,30 @@
+{
+    "name": "houses-server",
+    "version": "0.0.1",
+    "description": "Awesome project developed with TypeORM.",
+    "devDependencies": {
+        "@types/node": "^8.0.29",
+        "ts-node": "3.3.0",
+        "typescript": "3.3.3333"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "joi": "^14.3.1",
+        "jsonwebtoken": "^8.5.1",
+        "morgan": "^1.9.1",
+        "nodemon": "^1.19.1",
+        "pg": "^7.3.0",
+        "reflect-metadata": "^0.1.10",
+        "typeorm": "0.2.18"
+    },
+    "scripts": {
+        "start": "ts-node src/index.ts",
+        "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate",
+        "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
+        "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+        "schema:drop": "ts-node node_modules/typeorm/cli.js schema:drop"
+    }
+}
